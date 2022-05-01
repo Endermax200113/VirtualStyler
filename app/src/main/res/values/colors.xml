@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="basic">#983a38</color>
+
+    <color name="appPrimary">@color/basic</color>
+    <color name="appPrimaryDark">#491413</color>
+    <color name="appAccent">#fff</color>
+    <color name="appNavigationBar">#cc481413</color>
+
+
+</resources>
