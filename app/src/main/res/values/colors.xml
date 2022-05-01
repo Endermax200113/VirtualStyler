@@ -6,6 +6,6 @@
     <color name="appPrimaryDark">#491413</color>
     <color name="appAccent">#fff</color>
     <color name="appNavigationBar">#cc481413</color>
-
+    <color name="appToolbar">@color/basic</color>
 
 </resources>
