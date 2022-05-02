@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@+id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="com.justmax.virtualstyler.ui.nav.main.NavMain"
+        android:label="@string/main_navMenuItem_main"
+        tools:layout="@layout/fragment_nav_main"/>
+
+    <fragment
+        android:id="@+id/nav_catalog"
+        android:name="com.justmax.virtualstyler.ui.nav.catalog.NavCatalog"
+        android:label="@string/main_navMenuItem_catalog"
+        tools:layout="@layout/fragment_nav_catalog"/>
+
+    <fragment
+        android:id="@+id/nav_mannequin"
+        android:name="com.justmax.virtualstyler.ui.nav.mannequin.NavMannequin"
+        android:label="@string/main_navMenuItem_mannequin"
+        tools:layout="@layout/fragment_nav_mannequin"/>
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.justmax.virtualstyler.ui.nav.cart.NavCart"
+        android:label="@string/main_navMenuItem_cart"
+        tools:layout="@layout/fragment_nav_cart"/>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.justmax.virtualstyler.ui.nav.profile.NavProfile"
+        android:label="@string/main_navMenuItem_profile"
+        tools:layout="@layout/fragment_nav_profile"/>
+</navigation>

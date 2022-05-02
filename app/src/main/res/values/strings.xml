@@ -3,5 +3,11 @@
 
     <string name="appName">Виртуальный стилист</string>
 
+    <string name="main_menuItem_settings">Настройки</string>
 
+    <string name="main_navMenuItem_main">Главная</string>
+    <string name="main_navMenuItem_catalog">Каталог</string>
+    <string name="main_navMenuItem_mannequin">Манекен</string>
+    <string name="main_navMenuItem_cart">Корзина</string>
+    <string name="main_navMenuItem_profile">Профиль</string>
 </resources>

@@ -8,4 +8,6 @@
     <color name="appNavigationBar">#cc481413</color>
     <color name="appToolbar">@color/basic</color>
 
+    <color name="navSelected">@color/basic</color>
+    <color name="navUnselected">#000</color>
 </resources>
