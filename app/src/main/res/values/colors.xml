@@ -5,7 +5,7 @@
     <color name="appPrimary">@color/basic</color>
     <color name="appPrimaryDark">#491413</color>
     <color name="appAccent">#fff</color>
-    <color name="appNavigationBar">#4000</color>
+    <color name="appNavigationBar">#8000</color>
     <color name="appToolbar">@color/basic</color>
 
     <color name="navSelected">@color/basic</color>

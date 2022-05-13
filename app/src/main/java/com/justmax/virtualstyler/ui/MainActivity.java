@@ -1,8 +1,11 @@
 package com.justmax.virtualstyler.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -13,6 +16,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.justmax.virtualstyler.R;
 import com.justmax.virtualstyler.databinding.ActivityMainBinding;
+import com.justmax.virtualstyler.ui.menu.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -42,10 +46,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    /*@Override
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.main_menu_settings) {
-            startActivity(new Intent(this, Settings));
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
         }
-    }*/
+
+        return super.onOptionsItemSelected(item);
+    }
 }

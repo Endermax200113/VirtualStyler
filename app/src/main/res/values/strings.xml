@@ -10,4 +10,15 @@
     <string name="main_navMenuItem_mannequin">Манекен</string>
     <string name="main_navMenuItem_cart">Корзина</string>
     <string name="main_navMenuItem_profile">Профиль</string>
+
+    <string name="settings">Настройки</string>
+    <string name="settings_basic">Основное</string>
+    <string name="settings_basic_delivery">Адрес доставки</string>
+    <string name="settings_app">Приложение</string>
+    <string name="settings_app_cache">Очистить кеш</string>
+    <string name="settings_app_notification">Уведомления</string>
+    <string name="settings_app_notification_update">Частота обновления</string>
+    <string name="settings_app_graphics">Графика</string>
+    <string name="settings_app_graphics_quality">Качество графики</string>
+    <string name="settings_app_version">Версия</string>
 </resources>

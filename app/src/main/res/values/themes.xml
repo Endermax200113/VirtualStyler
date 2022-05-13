@@ -2,7 +2,7 @@
     <style name="Theme.VirtualStyler" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/appPrimary</item>
         <item name="colorPrimaryVariant">@color/appPrimaryDark</item>
-        <item name="colorOnPrimary">@color/appAccent</item>
+        <item name="colorAccent">@color/appAccent</item>
         <item name="android:navigationBarColor" tools:targetApi="l">@color/appNavigationBar</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
@@ -16,4 +16,13 @@
     <style name="Theme.VirtualStyler.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar"/>
 
     <style name="Theme.VirtualStyler.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="Theme.VirtualStyler.Preferences" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/appPrimary</item>
+        <item name="colorPrimaryVariant">@color/appPrimaryDark</item>
+        <item name="colorAccent">@color/basic</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/appNavigationBar</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
 </resources>

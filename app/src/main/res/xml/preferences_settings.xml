@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/settings_basic">
+        <EditTextPreference
+            app:key="basic_delivery"
+            app:title="@string/settings_basic_delivery"
+            app:defaultValue="@string/unknown"
+            app:useSimpleSummaryProvider="true"
+            app:icon="@drawable/ic_settings_basic_delivery" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_app">
+        <Preference
+            app:key="app_cache"
+            app:title="@string/settings_app_cache"
+            app:summary="@string/unknown"
+            app:icon="@drawable/ic_settings_app_cache" />
+
+        <ListPreference
+            app:key="app_notification"
+            app:title="@string/settings_app_notification"
+            app:defaultValue="1 минута"
+            app:useSimpleSummaryProvider="true"
+            app:dialogTitle="@string/settings_app_notification_update"
+            app:entries="@array/settings_app_notification"
+            app:entryValues="@array/settings_app_notification"
+            app:icon="@drawable/ic_settings_app_notification" />
+
+        <ListPreference
+            app:key="app_graphics"
+            app:title="@string/settings_app_graphics"
+            app:defaultValue="Средняя"
+            app:useSimpleSummaryProvider="true"
+            app:dialogTitle="@string/settings_app_graphics_quality"
+            app:entries="@array/settings_app_graphics"
+            app:entryValues="@array/settings_app_graphics"
+            app:icon="@drawable/ic_settings_app_graphics" />
+
+        <Preference
+            app:key="app_version"
+            app:title="@string/settings_app_version"
+            app:summary="@string/unknown"
+            app:icon="@drawable/ic_settings_app_version" />
+    </PreferenceCategory>
+</PreferenceScreen>

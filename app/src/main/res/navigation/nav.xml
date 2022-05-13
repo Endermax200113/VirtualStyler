@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_main"
         android:name="com.justmax.virtualstyler.ui.nav.main.NavMain"
-        android:label="@string/main_navMenuItem_main"
+        android:label="@string/appName"
         tools:layout="@layout/fragment_nav_main"/>
 
     <fragment
