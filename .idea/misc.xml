@@ -9,7 +9,9 @@
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable-v21/ic_settings_app_version.xml" value="0.153" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable-v21/ic_settings_basic_delivery.xml" value="0.1475" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.128" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_app_icon.xml" value="0.1605" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_launcher_background.xml" value="0.128" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1605" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_nav_cart.xml" value="0.1475" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_nav_catalog.xml" value="0.1475" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_nav_main.xml" value="0.1475" />
@@ -33,6 +35,8 @@
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/menu/menu_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/menu/nav_menu_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1605" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1605" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/xml/preferences_settings.xml" value="0.25" />
       </map>
     </option>
