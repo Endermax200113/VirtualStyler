@@ -39,4 +39,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
+
+    <style name="Theme.VirtualStyler.SearchActionBar" parent="Theme.VirtualStyler.ActionBar">
+        <item name="queryHint">@string/searchName</item>
+        <item name="android:textColorPrimary">@color/appAccent</item>
+        <item name="android:textColorSecondary">@color/appAccent</item>
+        <item name="android:textColorHint">@color/appAccent</item>
+        <item name="android:tint">@color/appAccent</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
 </resources>

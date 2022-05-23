@@ -1,6 +1,12 @@
 package com.justmax.virtualstyler.ui.nav.main;
 
+import android.app.DownloadManager;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +27,8 @@ import com.justmax.virtualstyler.util.Download;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -66,7 +74,7 @@ public class NavMain extends Fragment {
                         else
                             listRecMain.add(new Product.RecommendationMain(ID, title, description, imgPath, price));
 
-                        try {
+                        /*try {
                             File[] fileRec = new File[1];
                             File[] fileImg = new File[1];
 
@@ -78,11 +86,22 @@ public class NavMain extends Fragment {
 
                             Log.d("File", "Расположен -> " + fileImg[0]);
                             Log.d("Database", "Файл из сайта -> " + imgPath);
-                            Download.downloadFile(imgPath, fileImg[0]);
+                            //Download.downloadFile(imgPath, fileImg[0]);
+
+                            *//*DownloadManager.Request request = new DownloadManager.Request(Uri.parse(imgPath));
+                            request.setDestinationInExternalPublicDir(
+                                    root.getContext().getExternalCacheDir().getAbsolutePath() + "/main_recommendation/",
+                                    "" + ID + ".png"
+                            );
+                            DownloadManager manager = (DownloadManager) root.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+                            manager.enqueue(request);*//*
+
+
+
                             Log.d("Download", "Должно скачаться");
                         } catch (IOException e) {
                             e.printStackTrace();
-                        }
+                        }*/
                     }
 
                     rsRecMain.close();

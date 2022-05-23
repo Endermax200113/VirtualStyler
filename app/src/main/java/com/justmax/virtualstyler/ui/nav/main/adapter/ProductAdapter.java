@@ -1,6 +1,9 @@
 package com.justmax.virtualstyler.ui.nav.main.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Handler;
@@ -20,7 +23,10 @@ import com.justmax.virtualstyler.util.Download;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
+import java.util.Objects;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
     private final Context ctx;
@@ -43,19 +49,28 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Product.RecommendationMain recMain = listProducts.get(position);
-        File fileRec = new File(ctx.getExternalCacheDir().getAbsolutePath() + "/main_recommendation/");
+        /*File fileRec = new File(ctx.getExternalCacheDir().getAbsolutePath() + "/main_recommendation/");
         File fileImg = new File(fileRec.getAbsolutePath() + "/" + recMain.getID() + ".png");
 
         Drawable[] dr = new Drawable[] {
                 holder.imgBg.getDrawable(),
                 Drawable.createFromPath(fileImg.getPath())
         };
-        TransitionDrawable td = new TransitionDrawable(dr);
+        TransitionDrawable td = new TransitionDrawable(dr);*/
 
-        hand.post(() -> {
-            holder.imgBg.setImageDrawable(td);
-            td.startTransition(300);
-        });
+        try {
+            Log.d("Download", "Попытка скачать");
+            URL url = new URL(recMain.getPathImg());
+            Bitmap imgBitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//            Drawable dr = new BitmapDrawable(holder.imgBg.getResources(), imgBitmap);
+            holder.imgBg.setImageBitmap(imgBitmap);
+//            holder.imgBg.setImageDrawable(dr);
+            Log.d("Bitmap", "Должно получиться");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
 
         holder.txtTitle.setText(recMain.getTitle());
 

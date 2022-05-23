@@ -24,13 +24,15 @@
 
         <ImageView
             android:id="@+id/item_sec1_product_img"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:alpha=".4"
             android:contentDescription="@string/unknown"
+            android:cropToPadding="true"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/ic_test_sec1"
-            tools:ignore="ImageContrastCheck" />
+            tools:ignore="ImageContrastCheck"
+            android:adjustViewBounds="false"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/item_sec1_product_details"
