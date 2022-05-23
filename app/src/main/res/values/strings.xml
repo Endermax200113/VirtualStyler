@@ -4,6 +4,7 @@
     <string name="appName">Виртуальный стилист</string>
 
     <string name="main_menuItem_settings">Настройки</string>
+    <string name="main_menuItem_search">Поиск</string>
 
     <string name="main_navMenuItem_main">Главная</string>
     <string name="main_navMenuItem_catalog">Каталог</string>
