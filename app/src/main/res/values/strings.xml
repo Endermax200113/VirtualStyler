@@ -1,8 +1,10 @@
 <resources>
     <string name="unknown">Неизвестно</string>
+    <string name="searchName">Поиск</string>
+    <string name="strikePrice"><strike>6990 руб.</strike></string>
 
     <string name="appName">Виртуальный стилист</string>
-    <string name="searchName">Поиск</string>
+
 
     <string name="main_menuItem_settings">Настройки</string>
     <string name="main_menuItem_search">Поиск</string>

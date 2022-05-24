@@ -1,7 +1,5 @@
 package com.justmax.virtualstyler.mysql;
 
-import android.util.Log;
-
 import androidx.annotation.Nullable;
 
 import java.sql.Connection;
@@ -37,42 +35,33 @@ public class MySQL {
         }
     }
 
-    public static boolean connect() {
+    public static void connect() {
         try {
             if (con == null || con.isClosed())
                 con = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             System.err.println("Невозможно подключиться к базе данных, так как сервер был отключён");
             e.printStackTrace();
-            return false;
         }
-
-        return true;
     }
 
-    public static boolean disconnect() {
+    public static void disconnect() {
         try {
             if (!con.isClosed())
                 con.close();
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
         }
-
-        return true;
     }
 
-    public static boolean executeCommand(String $) {
+    public static void executeCommand(String $) {
         try {
             Statement stmt = con.createStatement();
             stmt.execute($);
             stmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
         }
-
-        return true;
     }
 
     @Nullable

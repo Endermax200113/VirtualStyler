@@ -55,4 +55,59 @@ public class Product {
             return price;
         }
     }
+
+    public static class FamousMain {
+        private final int ID;
+        private final String title, description, pathImg;
+        private final boolean existDiscount;
+        private double newPrice;
+        private final double oldPrice;
+
+        public FamousMain(int ID, String title, String description, String pathImg, double oldPrice, double newPrice) {
+            this.ID = ID;
+            this.title = title;
+            existDiscount = true;
+            this.newPrice = newPrice;
+            this.description = description;
+            this.pathImg = pathImg;
+            this.oldPrice = oldPrice;
+        }
+
+        public FamousMain(int ID, String title, String description, String pathImg, double price) {
+            this.ID = ID;
+            this.title = title;
+            existDiscount = false;
+            this.description = description;
+            this.pathImg = pathImg;
+            this.oldPrice = price;
+        }
+
+        public int getID() {
+            return ID;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public double getNewPrice() {
+            return newPrice;
+        }
+
+        public boolean existsDiscount() {
+            return existDiscount;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public String getPathImg() {
+            return pathImg;
+        }
+
+        public double getOldPrice() {
+            return oldPrice;
+        }
+    }
 }

@@ -3,7 +3,6 @@ package com.justmax.virtualstyler.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -21,8 +20,6 @@ import com.justmax.virtualstyler.databinding.ActivityMainBinding;
 import com.justmax.virtualstyler.mysql.MySQL;
 import com.justmax.virtualstyler.ui.menu.SearchActivity;
 import com.justmax.virtualstyler.ui.menu.SettingsActivity;
-
-import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     private static final int MAIN_MENUITEM_SEARCH = R.id.menuItem_main_search;
