@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.justmax.virtualstyler.R;
 import com.justmax.virtualstyler.data.Product;
@@ -29,12 +30,40 @@ import java.util.Objects;
 
 public class NavMain extends Fragment {
     private View root;
-    private static List<Product.RecommendationMain> listRecMain;
-    private static List<Product.FamousMain> listFamMain;
+    private List<Product.RecommendationMain> listRecMain;
+    private List<Product.FamousMain> listFamMain;
+    private SwipeRefreshLayout swipe;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        root = rebuild(inflater, container);
+
+        swipe = root.findViewById(R.id.nav_main_refresh);
+        swipe.setOnRefreshListener(() -> rebuild(inflater, container));
+        swipe.setColorSchemeResources(R.color.basic);
+
+        return root;
+    }
+
+    private void setMainFamousGrid(List<Product.FamousMain> listFamMain) {
+        GridView gvMainFam = root.findViewById(R.id.nav_main_sec2_famous);
+        FamousAdapter adapter = new FamousAdapter(root.getContext(), listFamMain);
+        gvMainFam.setAdapter(adapter);
+    }
+
+    private void setMainRecommendationRecycler(List<Product.RecommendationMain> listRecMain) {
+        RecyclerView.LayoutManager lm = new LinearLayoutManager(root.getContext(), RecyclerView.HORIZONTAL, false);
+
+        RecyclerView rvMainRec = root.findViewById(R.id.nav_main_sec1_recommendation_pages);
+        rvMainRec.setLayoutManager(lm);
+
+        RecommendationAdapter adapter = new RecommendationAdapter(root.getContext(), listRecMain);
+        rvMainRec.setAdapter(adapter);
+    }
+
+    @SuppressLint("InflateParams")
+    private View rebuild(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
         root = inflater.inflate(R.layout.fragment_nav_main, container, false);
         Handler hand = new Handler(root.getContext().getMainLooper());
 
@@ -100,25 +129,10 @@ public class NavMain extends Fragment {
             hand.post(() -> {
                 setMainRecommendationRecycler(listRecMain);
                 setMainFamousGrid(listFamMain);
+                swipe.setRefreshing(false);
             });
         }).start();
 
         return root;
-    }
-
-    private void setMainFamousGrid(List<Product.FamousMain> listFamMain) {
-        GridView gvMainFam = root.findViewById(R.id.nav_main_sec2_famous);
-        FamousAdapter adapter = new FamousAdapter(root.getContext(), listFamMain);
-        gvMainFam.setAdapter(adapter);
-    }
-
-    private void setMainRecommendationRecycler(List<Product.RecommendationMain> listRecMain) {
-        RecyclerView.LayoutManager lm = new LinearLayoutManager(root.getContext(), RecyclerView.HORIZONTAL, false);
-
-        RecyclerView rvMainRec = root.findViewById(R.id.nav_main_sec1_recommendation_pages);
-        rvMainRec.setLayoutManager(lm);
-
-        RecommendationAdapter adapter = new RecommendationAdapter(root.getContext(), listRecMain);
-        rvMainRec.setAdapter(adapter);
     }
 }

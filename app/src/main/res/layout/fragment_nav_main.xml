@@ -8,31 +8,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.nav.main.NavMain">
 
-    <LinearLayout
-        android:id="@+id/nav_main_sec1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="@id/nav_main_sec1"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/nav_main_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/nav_main_sec1_recommendation_pages"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scrollbars="horizontal"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="25dp"
-            tools:listitem="@layout/item_sec1_product" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="25dp">
 
-        <GridView
-            android:id="@+id/nav_main_sec2_famous"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="2" />
+            <LinearLayout
+                android:id="@+id/nav_main_sec1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/nav_main_sec1_recommendation_pages"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scrollbars="horizontal"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    tools:listitem="@layout/item_sec1_product" />
 
-    </LinearLayout>
+                <GridView
+                    android:id="@+id/nav_main_sec2_famous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="2"
+                    tools:ignore="NestedScrolling" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
