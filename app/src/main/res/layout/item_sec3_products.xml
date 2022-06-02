@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_sec3_products"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:paddingStart="25dp"
+    android:paddingEnd="25dp"
+    android:paddingBottom="25dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/item_sec3_products_pages"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/item_sec3_products_bgDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/item_sec3_products_pages"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shape_discount_left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_sec3_products_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="-50%"
+                    android:textColor="#fff"
+                    android:visibility="visible"
+                    android:textSize="8sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_sec3_products_pagesNums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/item_sec3_products_pages"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/shape_products_pages_right"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/shape_products_pages_here"/>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/shape_products_pages_not"
+                    android:layout_marginStart="4dp"/>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/shape_products_pages_not"
+                    android:layout_marginStart="4dp"/>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/shape_products_pages_not"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/item_sec3_products_favorites"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/unknown"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:background="@drawable/ic_rating_null"
+                android:adjustViewBounds="false"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_sec3_products_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                app:layout_constraintTop_toBottomOf="@id/item_sec3_products_pages"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/item_sec3_products_details_newPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mustica_pro"
+                    android:text="13 832 руб."
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginTop="-5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/item_sec3_products_details_oldPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mustica_pro"
+                    android:text="@string/strikePrice"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+                    android:alpha=".7"
+                    app:layout_constraintTop_toBottomOf="@id/item_sec3_products_details_newPrice"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/item_sec3_products_details_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mustica_pro"
+                    android:text="FIRSTTRY"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toBottomOf="@id/item_sec3_products_details_oldPrice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="2dp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <TextView
+                    android:id="@+id/item_sec3_products_details_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mustica_pro"
+                    android:text="Косуха"
+                    android:textColor="#000"
+                    android:textSize="8sp"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintTop_toBottomOf="@id/item_sec3_products_details_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <LinearLayout
+                    android:id="@+id/item_sec3_products_details_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/item_sec3_products_details_type"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/item_sec3_products_details_rating_rate1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/unknown"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_rating_full"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageView
+                        android:id="@+id/item_sec3_products_details_rating_rate2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="7dp"
+                        android:contentDescription="@string/unknown"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_rating_full"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageView
+                        android:id="@+id/item_sec3_products_details_rating_rate3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="7dp"
+                        android:contentDescription="@string/unknown"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_rating_full"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageView
+                        android:id="@+id/item_sec3_products_details_rating_rate4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="7dp"
+                        android:contentDescription="@string/unknown"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_rating_half"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageView
+                        android:id="@+id/item_sec3_products_details_rating_rate5"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="7dp"
+                        android:contentDescription="@string/unknown"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_rating_null"
+                        android:adjustViewBounds="false"/>
+
+                    <TextView
+                        android:id="@+id/item_sec3_products_details_rating_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/myriad_pro"
+                        android:text="272"
+                        android:textColor="#737373"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_sec3_products_details_delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/item_sec3_products_details_rating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/unknown"
+                        android:cropToPadding="true"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_delivery"/>
+
+                    <TextView
+                        android:id="@+id/item_sec3_products_details_delivery_when"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/mustica_pro"
+                        android:text="Завтра"
+                        android:textColor="#000"
+                        android:textSize="10sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/item_sec3_products_details_inCart"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_nav_cart"
+                    android:contentDescription="@string/unknown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

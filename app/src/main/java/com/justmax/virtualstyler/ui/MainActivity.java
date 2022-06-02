@@ -1,10 +1,13 @@
 package com.justmax.virtualstyler.ui;
 
 import android.content.Intent;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,9 +24,14 @@ import com.justmax.virtualstyler.mysql.MySQL;
 import com.justmax.virtualstyler.ui.menu.SearchActivity;
 import com.justmax.virtualstyler.ui.menu.SettingsActivity;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
     private static final int MAIN_MENUITEM_SEARCH = R.id.menuItem_main_search;
     private static final int MAIN_MENUITEM_SETTINGS = R.id.menuItem_main_settings;
+
+    public static int scrWidth, scrHeight;
+    public static WindowManager window;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,6 +55,19 @@ public class MainActivity extends AppCompatActivity {
         NavController navCtrl = Navigation.findNavController(this, R.id.main_navView);
         NavigationUI.setupActionBarWithNavController(this, navCtrl, navConfig);
         NavigationUI.setupWithNavController(navMain, navCtrl);
+
+        Point size = new Point();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            Objects.requireNonNull(getDisplay()).getRealSize(size);
+        } else {
+            getWindowManager().getDefaultDisplay().getSize(size);
+        }
+
+        scrWidth = size.x;
+        scrHeight = size.y;
+
+        window = getWindowManager();
     }
 
     @Override

@@ -18,7 +18,7 @@ public class MySQL {
             "useSSL=false&" +
             "characterEncoding=UTF-8&" +
             "zeroDateTimeBehavior=convertToNull&" +
-            "retainStatementAfterResultSetClose=true";
+            "retainStatementAfterResultSetClose=true&";
     private static final String user = "u1679042";
     private static final String password = "virtualstyler_db";
     private static Connection con;

@@ -28,11 +28,19 @@
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/selector_nav.xml" value="0.1475" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/shape_bg_round.xml" value="0.1605" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/shape_discound_right.xml" value="0.1605" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/shape_discount_left.xml" value="0.1605" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/shape_discount_right.xml" value="0.1605" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/shape_products_pages_here.xml" value="0.2" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/shape_products_pages_not.xml" value="0.2" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/shape_products_pages_right.xml" value="0.2" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/font/mustica_pro.xml" value="0.23333333333333334" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout-land/fragment_nav_main.xml" value="0.15520833333333334" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout-v29/toolbar.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/activity_auth_login.xml" value="0.22" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/activity_auth_register.xml" value="0.25" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/activity_search.xml" value="0.25" />
-        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/activity_settings.xml" value="0.1" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/activity_settings.xml" value="0.22" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_cart.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_catalog.xml" value="0.20416666666666666" />
@@ -40,7 +48,9 @@
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_mannequin.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec1_product.xml" value="0.25" />
-        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec2_famous.xml" value="0.25" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec2_famous.xml" value="0.5937007874015748" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec3_products.xml" value="0.25" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec3_products_page.xml" value="0.203125" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/page_recomendation_nav_main.xml" value="0.203125" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/page_recommendation_nav_main.xml" value="0.33" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/screen_splash.xml" value="0.203125" />

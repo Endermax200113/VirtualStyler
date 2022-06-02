@@ -1,9 +1,7 @@
 package com.justmax.virtualstyler.ui.nav.main.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Log;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +17,7 @@ import com.justmax.virtualstyler.R;
 import com.justmax.virtualstyler.data.Product;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
@@ -43,9 +42,9 @@ public class RecommendationAdapter extends RecyclerView.Adapter<RecommendationAd
         Product.RecommendationMain recMain = listProducts.get(position);
 
         try {
-            URL url = new URL(recMain.getPathImg());
-            Bitmap imgBitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-            holder.imgBg.setImageBitmap(imgBitmap);
+            InputStream is = (InputStream) new URL(recMain.getPathImg()).getContent();
+            Drawable d = Drawable.createFromStream(is, "rec" + position);
+            holder.imgBg.setImageDrawable(d);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -65,7 +64,6 @@ public class RecommendationAdapter extends RecyclerView.Adapter<RecommendationAd
         holder.txtDescription.setText(recMain.getDescription());
 
         if (listProducts.size() - 1 == position) {
-            Log.d("List", "Должно тут что-то появится");
 
             float scale = ctx.getResources().getDisplayMetrics().density;
             int left = (int) (25 * scale);

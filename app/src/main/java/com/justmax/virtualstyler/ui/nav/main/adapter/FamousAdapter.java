@@ -2,6 +2,7 @@ package com.justmax.virtualstyler.ui.nav.main.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Paint;
@@ -73,11 +74,21 @@ public class FamousAdapter extends BaseAdapter {
         int left = lytMain.getPaddingStart();
         int bottom = lytMain.getPaddingBottom();
         int right = lytMain.getPaddingRight();
+        int orienration = ctx.getResources().getConfiguration().orientation;
 
-        if (i % 2 == 0)
-            lytMain.setPadding(left, top, right / 2, bottom);
-        else
-            lytMain.setPadding(left / 2, top, right, bottom);
+        if (orienration == Configuration.ORIENTATION_PORTRAIT) {
+            if (i % 2 == 0)
+                lytMain.setPadding(left, top, right / 2, bottom);
+            else
+                lytMain.setPadding(left / 2, top, right, bottom);
+        } else {
+            if (i % 3 == 0)
+                lytMain.setPadding(left, top, right / 2, bottom);
+            else if (i % 3 == 1)
+                lytMain.setPadding(left / 2, top, right / 2, bottom);
+            else
+                lytMain.setPadding(left / 2, top, right, bottom);
+        }
 
         try {
             URL url = new URL(famMain.getPathImg());

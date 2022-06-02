@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_sec2_famous_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingStart="25dp"
     android:paddingEnd="25dp"
     android:paddingBottom="25dp">
@@ -42,7 +44,6 @@
                 android:orientation="vertical"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -54,7 +55,8 @@
                     android:text="@string/strikePrice"
                     android:textColor="#fff"
                     android:textSize="10sp"
-                    android:alpha=".7" />
+                    android:alpha=".7"
+                    tools:ignore="SmallSp" />
 
                 <TextView
                     android:id="@+id/item_sec2_famous_details_newPrice"
@@ -64,7 +66,8 @@
                     android:text="3490 руб."
                     android:textColor="#fff"
                     android:textSize="13sp"
-                    android:layout_marginTop="-3dp"/>
+                    android:layout_marginTop="-3dp"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <LinearLayout
@@ -89,7 +92,8 @@
                     android:layout_marginBottom="2dp"
                     android:text="-50%"
                     android:textColor="#fff"
-                    android:textSize="8sp"/>
+                    android:textSize="8sp"
+                    tools:ignore="HardcodedText,SmallSp" />
             </LinearLayout>
 
             <LinearLayout
@@ -123,7 +127,8 @@
                     android:fontFamily="@font/mustica_pro"
                     android:text="@string/unknown"
                     android:textColor="#fff"
-                    android:textSize="7sp"/>
+                    android:textSize="7sp"
+                    tools:ignore="SmallSp" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

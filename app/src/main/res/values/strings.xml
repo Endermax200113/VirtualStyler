@@ -5,8 +5,8 @@
 
     <string name="appName">Виртуальный стилист</string>
 
-
     <string name="main_menuItem_settings">Настройки</string>
+    <string name="main_menuItem_feedback">Обратная связь</string>
     <string name="main_menuItem_search">Поиск</string>
 
     <string name="main_navMenuItem_main">Главная</string>
@@ -25,4 +25,17 @@
     <string name="settings_app_graphics">Графика</string>
     <string name="settings_app_graphics_quality">Качество графики</string>
     <string name="settings_app_version">Версия</string>
+
+    <string name="auth_register_title">Регистрация</string>
+    <string name="auth_register_email">E-Mail</string>
+    <string name="auth_register_name">Имя</string>
+    <string name="auth_register_password">Пароль</string>
+    <string name="auth_register_repeat">Повторный пароль</string>
+    <string name="auth_register_btn">Зарегистрироваться</string>
+    <string name="auth_register_toLogin">У Вас есть аккаунт?</string>
+    <string name="auth_login_title">Войти</string>
+    <string name="auth_login_email">E-Mail</string>
+    <string name="auth_login_password">Пароль</string>
+    <string name="auth_login_btn">Войти</string>
+    <string name="auth_login_toRegister">У Вас нет аккаунта?</string>
 </resources>

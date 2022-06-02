@@ -34,24 +34,23 @@
                     android:id="@+id/nav_main_sec1_recommendation_pages"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
+                    android:scrollbars="horizontal"
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="25dp"
-                    android:scrollbars="horizontal"
                     tools:listitem="@layout/item_sec1_product" />
 
                 <GridView
                     android:id="@+id/nav_main_sec2_famous"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:numColumns="2"
+                    android:numColumns="3"
                     tools:ignore="NestedScrolling" />
 
                 <GridView
                     android:id="@+id/nav_main_sec3_products"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:numColumns="2"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
                     tools:ignore="NestedScrolling" />
             </LinearLayout>
         </ScrollView>
