@@ -36,6 +36,7 @@
             android:ems="10"
             android:textColorHint="@color/appAccent"
             android:backgroundTint="@color/appAccent"
+            android:textColor="#fff"
             android:hint="@string/auth_register_email"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +56,8 @@
             android:inputType="textPersonName"
             android:hint="@string/auth_register_name"
             android:textColorHint="@color/appAccent"
-            android:backgroundTint="@color/appAccent"/>
+            android:backgroundTint="@color/appAccent"
+            android:textColor="#fff"/>
 
         <EditText
             android:id="@+id/auth_register_password"
@@ -70,7 +72,8 @@
             android:inputType="textPassword"
             android:hint="@string/auth_register_password"
             android:textColorHint="@color/appAccent"
-            android:backgroundTint="@color/appAccent"/>
+            android:backgroundTint="@color/appAccent"
+            android:textColor="#fff"/>
 
         <EditText
             android:id="@+id/auth_register_repeat"
@@ -85,7 +88,8 @@
             android:inputType="textPassword"
             android:hint="@string/auth_register_repeat"
             android:textColorHint="@color/appAccent"
-            android:backgroundTint="@color/appAccent"/>
+            android:backgroundTint="@color/appAccent"
+            android:textColor="#fff"/>
 
         <Button
             android:id="@+id/auth_register_btn"

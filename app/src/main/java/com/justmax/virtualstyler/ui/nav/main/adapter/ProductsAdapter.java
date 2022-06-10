@@ -100,6 +100,7 @@ public class ProductsAdapter extends BaseAdapter {
         TextView txtRatingCount = view.findViewById(R.id.item_sec3_products_details_rating_count);
         LinearLayout lytDelivery = view.findViewById(R.id.item_sec3_products_details_delivery);
         TextView txtWhen = view.findViewById(R.id.item_sec3_products_details_delivery_when);
+        ImageButton ibMannequin = view.findViewById(R.id.item_sec3_products_details_inMannequin);
 
         ArrayList<ImageView> arrRates = new ArrayList<>();
         arrRates.add(imgRate1);
@@ -247,6 +248,10 @@ public class ProductsAdapter extends BaseAdapter {
                     txtWhen.setText(new StringBuilder().append("Через ").append(when).append(" дней"));
             }
         }
+
+        ibMannequin.setOnClickListener(e -> {
+            //TODO Разработать ListView во фрагменте манекена
+        });
 
         return view;
     }

@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_nav_mannequin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.nav.mannequin.NavMannequin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nav_mannequin_graphics"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="#000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/nav_mannequin_graphics_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/unknown"
+            android:src="@drawable/ic_main_mannequin"
+            android:layout_margin="30dp"/>
+
+        <ImageView
+            android:id="@+id/nav_mannequin_graphics_body"
+            android:layout_width="200dp"
+            android:layout_height="235dp"
+            android:contentDescription="@string/unknown"
+            app:layout_constraintTop_toTopOf="@id/nav_mannequin_graphics_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/nav_mannequin_btnClothes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nav_mannequin_graphics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="@string/mannequin_toClothes"
+        android:fontFamily="@font/mustica_pro"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp" />
+
+    <Button
+        android:id="@+id/nav_mannequin_btnRemove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nav_mannequin_btnClothes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:text="@string/mannequin_remove"
+        android:fontFamily="@font/mustica_pro"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp" />
+
+    <TextView
+        android:id="@+id/nav_mannequin_titleList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nav_mannequin_btnRemove"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mustica_pro"
+        android:text="@string/mannequin_list"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"/>
+
+    <ListView
+        android:id="@+id/nav_mannequin_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nav_mannequin_titleList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

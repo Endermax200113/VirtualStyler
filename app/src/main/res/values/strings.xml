@@ -38,4 +38,8 @@
     <string name="auth_login_password">Пароль</string>
     <string name="auth_login_btn">Войти</string>
     <string name="auth_login_toRegister">У Вас нет аккаунта?</string>
+
+    <string name="mannequin_toClothes">Одеть/Снять</string>
+    <string name="mannequin_remove">Убрать</string>
+    <string name="mannequin_list">Список одежд:</string>
 </resources>

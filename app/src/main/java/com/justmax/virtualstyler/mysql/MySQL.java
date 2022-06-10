@@ -54,10 +54,10 @@ public class MySQL {
         }
     }
 
-    public static void executeCommand(String $) {
+    public static void update(String $) {
         try {
             Statement stmt = con.createStatement();
-            stmt.execute($);
+            stmt.executeUpdate($);
             stmt.close();
         } catch (SQLException e) {
             e.printStackTrace();

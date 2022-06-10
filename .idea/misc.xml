@@ -15,6 +15,7 @@
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_app_search.xml" value="0.1605" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_launcher_background.xml" value="0.128" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1605" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_main_mannequin.xml" value="0.1285" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_nav_cart.xml" value="0.1475" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_nav_catalog.xml" value="0.1475" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/drawable/ic_nav_main.xml" value="0.1475" />
@@ -45,11 +46,11 @@
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_cart.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_catalog.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_main.xml" value="0.22" />
-        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_mannequin.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_mannequin.xml" value="0.25" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/fragment_nav_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec1_product.xml" value="0.25" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec2_famous.xml" value="0.5937007874015748" />
-        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec3_products.xml" value="0.25" />
+        <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec3_products.xml" value="0.22" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/item_sec3_products_page.xml" value="0.203125" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/page_recomendation_nav_main.xml" value="0.203125" />
         <entry key="..\:/Android/VirtualStyler/app/src/main/res/layout/page_recommendation_nav_main.xml" value="0.33" />
