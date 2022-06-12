@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -27,9 +28,12 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
     private static final int MAIN_MENUITEM_SEARCH = R.id.menuItem_main_search;
     private static final int MAIN_MENUITEM_SETTINGS = R.id.menuItem_main_settings;
+    private static final int MAIN_MENUITEM_BACK = android.R.id.home;
 
     public static int scrWidth, scrHeight;
     public static WindowManager window;
+    public static ActionBar actionBar;
+    private static Runnable runOnBack;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         scrHeight = size.y;
 
         window = getWindowManager();
+
+        actionBar = getSupportActionBar();
     }
 
     @Override
@@ -81,8 +87,15 @@ public class MainActivity extends AppCompatActivity {
             case MAIN_MENUITEM_SEARCH:
                 startActivity(new Intent(this, SearchActivity.class));
                 return true;
+            case MAIN_MENUITEM_BACK:
+                runOnBack.run();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public static void setOnBack(Runnable run) {
+        runOnBack = run;
     }
 }

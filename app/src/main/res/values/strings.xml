@@ -42,4 +42,19 @@
     <string name="mannequin_toClothes">Одеть/Снять</string>
     <string name="mannequin_remove">Убрать</string>
     <string name="mannequin_list">Список одежд:</string>
+
+    <string name="catalog_for_men">Мужские</string>
+    <string name="catalog_for_women">Женские</string>
+    <string name="catalog_for_children">Детские</string>
+    <string name="catalog_clothes_tshirt">Футболки</string>
+    <string name="catalog_clothes_shirts">Рубашки</string>
+    <string name="catalog_clothes_pants">Брюки</string>
+    <string name="catalog_clothes_outwear">Верхняя одежда</string>
+    <string name="catalog_clothes_jeans">Джинсы</string>
+    <string name="catalog_clothes_overalls">Комбинезоны</string>
+    <string name="catalog_clothes_suits">Костюмы</string>
+    <string name="catalog_clothes_mikey">Майки</string>
+    <string name="catalog_clothes_jackets">Пиджаки</string>
+    <string name="catalog_clothes_hoodies">Толстовки</string>
+    <string name="catalog_clothes_shorts">Шорты</string>
 </resources>
